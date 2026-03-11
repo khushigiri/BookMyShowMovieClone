@@ -1,15 +1,11 @@
 import "./App.css";
 import axios from "axios";
-// import .env from ".dotenv";
 
-// Routers
 import { Routes, Route } from "react-router-dom";
 
-// React Slick CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Pages
 import PlayPage from "./pages/Play.page";
 import MoviePage from "./pages/Movie.page";
 import HomePage from "./pages/Home.Page";

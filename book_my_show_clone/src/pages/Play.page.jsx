@@ -1,7 +1,6 @@
 import React from "react";
 import DefaultLayoutHoc from "../layouts/Default.layout";
 
-// components
 import Poster from "../components/Poster/Poster.Component";
 import PlayFilters from "../components/PlayFilters/PlayFilters.Component";
 

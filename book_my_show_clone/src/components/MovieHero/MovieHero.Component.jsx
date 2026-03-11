@@ -7,11 +7,10 @@ const MovieHero = () => {
 
   const genres = movie.genres?.map(({ name }) => name).join(", ");
 
-  // console.log(genres);
   return (
     <>
       <div>
-        {/* Mobile and Tab Screen i.e., small and medium screen size */}
+        {/* Mobile and Tab Screen */}
         <div className="lg:hidden w-full">
           <img
             src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
@@ -39,8 +38,7 @@ const MovieHero = () => {
             </button>
           </div>
         </div>
-        {/* ctrl+/ */}
-        {/* Large Screen Size i.e., Laptop */}
+        {/* Large Screen Size */}
         <div
           className="relative hidden w-full lg:block"
           style={{ height: "28rem" }}

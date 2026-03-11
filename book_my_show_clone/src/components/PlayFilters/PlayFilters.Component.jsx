@@ -3,7 +3,6 @@ import { Disclosure } from "@headlessui/react";
 import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 
 const PlayFilters = (props) => {
-  // console.log(props)
   return (
     <Disclosure>
       {({ open }) => (

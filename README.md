@@ -1,58 +1,127 @@
-## Pages/Components:
+# BookMyShow Clone (React)
 
-    >> Home.page.jsx (Default.Hoc.jsx)
-    >> Movie.page.jsx (Movie.Hoc.jsx)
-    >> Play.page.jsx (Default.Hoc.jsx)
+A BookMyShow-inspired movie browsing web application built using React.js.
+The application allows users to explore movies, view details, see cast information, browse plays, and simulate movie rental or purchase using a Razorpay payment modal.
 
-## HOCs/Layouts:
+This project fetches movie data dynamically from **The Movie Database (TMDB) API** and displays it using responsive UI components built with Tailwind CSS.
 
-    >> Default.Hoc.jsx
-    >> Movie.Hoc.jsx
+---
 
-## Components
+## Features
 
-    >> Cast             Cast.Component.jsx
-    >> Entertainment    EntertainmentCard.component.jsx
-    >> HeroCarousel     HeroCarousel.Component.jsx
-                        Arrows.Component.jsx
-    >> MovieHero        MovieHero.Component.jsx
-                        MovieInfo.Component.jsx
-    >> Navbar           Navbar.Component.jsx
-                        MovieNavbar.Component.jsx
-    >> PaymentModal     PaymentComponent.jsx
-    >> PlayFilters      Filters.Component.jsx
-    >> Poster           Poster.Component.jsx
-    >> PosterSlider     PosterSliderComponent.jsx
+* Browse popular, top-rated, and upcoming movies
+* Interactive hero carousel
+* Detailed movie information page
+* Cast and crew slider
+* Recommended and similar movies
+* Browse plays and events
+* Razorpay payment integration for rent or buy
+* Fully responsive design
+* Movie search UI
+* Dynamic poster sliders
 
-## npx create-react-app project_name
+---
 
-## cd project_name
+## Tech Stack
 
-## TailWind
+Frontend
 
-npm install -D tailwindcss postcss autofixer
-npx tailwindcss init
+* React.js
+* Tailwind CSS
+* React Router DOM
+* Axios
 
-## React Slick
+UI & Libraries
 
-npm install react-slick
-npm install slick-carousel
-npm run start
+* React Slick (Carousel)
+* Headless UI
+* React Icons
 
-## Axios
+API
 
-npm install axios
+* TMDB API (The Movie Database)
 
-## Headless UI
+Payment
 
-npm install @headlessui/react
+* Razorpay Payment Gateway
 
-## React icons
+---
 
-npm install react-icons
+## Project Structure
 
-## Router-Dom
+src
+│
+├── components
+│   ├── Cast
+│   ├── Entertainment
+│   ├── HeroCarousel
+│   ├── MovieHero
+│   ├── Navbar
+│   ├── PaymentModal
+│   ├── PlayFilters
+│   ├── Poster
+│   └── PosterSlider
+│
+├── context
+│   └── Movie.context.js
+│
+├── layouts
+│   ├── Default.layout.jsx
+│   └── Movie.layout.jsx
+│
+├── pages
+│   ├── Home.Page.jsx
+│   ├── Movie.page.jsx
+│   └── Play.page.jsx
+│
+├── App.js
+├── index.js
+└── index.css
 
-npm i react-router-dom
+---
 
-## https://api.themoviedb.org/3/movie/550?api_key=05d42fd383aaef9679971cf9e299d14d
+## Screens
+
+* Home page with movie carousels
+* Movie details page with cast, offers, and recommendations
+* Plays page with filters
+* Razorpay payment modal
+
+---
+
+## Payment Integration
+
+The project integrates Razorpay for simulated movie purchase or rental.
+
+Payment options:
+
+* Rent Movie
+* Buy Movie
+
+---
+
+## API Used
+
+The application uses TMDB API endpoints such as:
+
+* `/movie/popular`
+* `/movie/top_rated`
+* `/movie/upcoming`
+* `/movie/{id}`
+* `/movie/{id}/credits`
+* `/movie/{id}/similar`
+* `/movie/{id}/recommendations`
+
+---
+
+## Responsive Design
+
+The UI adapts to:
+
+* Mobile devices
+* Tablets
+* Desktop screens
+
+Using Tailwind CSS utility classes.
+
+---

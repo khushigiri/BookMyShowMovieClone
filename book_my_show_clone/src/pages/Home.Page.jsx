@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-// Layout HOC
 import DefaultLayoutHoc from "../layouts/Default.layout";
 
-// Components
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel.Component";
 import PosterSlider from "../components/PosterSlider/PosterSlider.Component";
 import EntertainmentCardSlider from "../components/Entertainment/EntertainmentCardComponent";
@@ -14,7 +12,6 @@ const HomePage = () => {
   const [premierMovies, setPremierMovies] = useState([]);
   const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
 
-  // get.apiName('/', async ()=>{})
   useEffect(() => {
     const requestPopularMovies = async () => {
       const getPopularMovies = await axios.get("/movie/popular");

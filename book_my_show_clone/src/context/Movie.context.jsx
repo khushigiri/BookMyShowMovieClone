@@ -1,6 +1,3 @@
-// Context API
-// We can store/edit/update data from any component & then can access it in any of the component
-
 import React, { createContext, useState } from "react";
 
 export const MovieContext = createContext();
