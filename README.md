@@ -3,7 +3,7 @@
 A BookMyShow-inspired movie browsing web application built using React.js.
 The application allows users to explore movies, view details, see cast information, browse plays, and simulate movie rental or purchase using a Razorpay payment modal.
 
-This project fetches movie data dynamically from **The Movie Database (TMDB) API** and displays it using responsive UI components built with Tailwind CSS.
+This project fetches movie data dynamically from **The Movie Database (TMDB) API** and displays it using responsive UI components built with **Tailwind CSS**.
 
 ---
 
@@ -24,59 +24,26 @@ This project fetches movie data dynamically from **The Movie Database (TMDB) API
 
 ## Tech Stack
 
-Frontend
+**Frontend**
 
 * React.js
 * Tailwind CSS
 * React Router DOM
 * Axios
 
-UI & Libraries
+**UI & Libraries**
 
 * React Slick (Carousel)
 * Headless UI
 * React Icons
 
-API
+**API**
 
 * TMDB API (The Movie Database)
 
-Payment
+**Payment**
 
 * Razorpay Payment Gateway
-
----
-
-## Project Structure
-
-src
-│
-├── components
-│   ├── Cast
-│   ├── Entertainment
-│   ├── HeroCarousel
-│   ├── MovieHero
-│   ├── Navbar
-│   ├── PaymentModal
-│   ├── PlayFilters
-│   ├── Poster
-│   └── PosterSlider
-│
-├── context
-│   └── Movie.context.js
-│
-├── layouts
-│   ├── Default.layout.jsx
-│   └── Movie.layout.jsx
-│
-├── pages
-│   ├── Home.Page.jsx
-│   ├── Movie.page.jsx
-│   └── Play.page.jsx
-│
-├── App.js
-├── index.js
-└── index.css
 
 ---
 
@@ -91,7 +58,7 @@ src
 
 ## Payment Integration
 
-The project integrates Razorpay for simulated movie purchase or rental.
+The project integrates **Razorpay** for simulated movie purchase or rental.
 
 Payment options:
 
