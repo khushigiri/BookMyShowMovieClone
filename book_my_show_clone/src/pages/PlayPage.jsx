@@ -1,8 +1,8 @@
 import React from "react";
-import DefaultLayoutHoc from "../layouts/Default.layout";
+import DefaultLayoutHoc from "../layouts/DefaultLayout";
 
-import Poster from "../components/Poster/Poster.Component";
-import PlayFilters from "../components/PlayFilters/PlayFilters.Component";
+import Poster from "../components/Poster/Poster";
+import PlayFilters from "../components/PlayFilters/PlayFilters";
 
 const PlayPage = () => {
   return (

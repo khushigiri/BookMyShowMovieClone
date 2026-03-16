@@ -1,22 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
 
-const EntertainmentCard = (props) => {
-  return (
-    <>
-      <div className="w-full h-30 px-2">
-        <img
-          className="w-full h-full rounded-lg"
-          src={props.src}
-          alt="entertainment"
-        />
-      </div>
-    </>
+const EntertainmentCard = ({ src }) => {
+  return (<div className="w-full h-full px-2"> <img
+    src={src}
+    alt="entertainment"
+    className="w-full h-full rounded-lg object-cover"
+    loading="lazy"
+  /> </div>
   );
 };
 
 const EntertainmentCardSlider = () => {
-  const EntertainmentImage = [
+  const entertainmentImages = [
     "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png",
     "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MyBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png",
     "https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NiBFdmVudHM%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png",
@@ -58,13 +54,9 @@ const EntertainmentCardSlider = () => {
   };
 
   return (
-    <>
-      <Slider {...settings}>
-        {EntertainmentImage.map((image, index) => (
-          <EntertainmentCard src={image} key={index} />
-        ))}
-      </Slider>
-    </>
+    <Slider {...settings}>
+      {entertainmentImages.map((image) => (<EntertainmentCard src={image} key={image} />
+      ))} </Slider>
   );
 };
 
