@@ -3,7 +3,7 @@ import MovieNavbar from "../components/Navbar/MovieNavbar";
 
 const MovieLayoutHoc = (WrappedComponent) => {
   const Layout = (props) => {
-    return (<div className="bg-white min-h-screen">
+    return (<div className="bg-white">
 
       {/* Movie Navbar */}
       <MovieNavbar />
@@ -15,7 +15,6 @@ const MovieLayoutHoc = (WrappedComponent) => {
 
       {/* Footer */}
       <footer className="text-center py-6 text-gray-500">
-        Footer
       </footer>
 
     </div>

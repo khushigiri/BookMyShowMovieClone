@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 const DefaultLayoutHoc = (WrappedComponent) => {
   const Layout = (props) => {
-    return (<div className="bg-gray-50 min-h-screen">
+    return (<div className="bg-gray-50">
 
       {/* Navbar */}
       <Navbar />

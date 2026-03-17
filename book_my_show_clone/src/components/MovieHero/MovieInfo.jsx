@@ -17,6 +17,7 @@ const MovieInfo = () => {
     .join(", ");
 
   const rentMovie = () => {
+
     setPrice(149);
     setIsOpen(true);
   };
@@ -27,11 +28,14 @@ const MovieInfo = () => {
   };
 
   return (
-    <> <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />
+    <>
+
+      <PaymentModal setIsOpen={setIsOpen} isOpen={isOpen} price={price} />
 
       <div className="flex flex-col gap-8">
         <h1 className="text-white text-5xl font-bold">
           {movie?.original_title}
+
         </h1>
 
         <div className="text-white flex flex-col gap-2">

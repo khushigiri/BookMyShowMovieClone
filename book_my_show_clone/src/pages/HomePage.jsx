@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-import DefaultLayoutHoc from "../layouts/Default.layout";
+import DefaultLayoutHoc from "../layouts/DefaultLayout";
 
 import HeroCarousel from "../components/HeroCarousel/HeroCarousel";
 import PosterSlider from "../components/PosterSlider/PosterSlider";
@@ -11,6 +11,7 @@ const HomePage = () => {
   const [recommendedMovies, setRecommendedMovies] = useState([]);
   const [premierMovies, setPremierMovies] = useState([]);
   const [onlineStreamEvents, setOnlineStreamEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const requestMovies = async () => {
@@ -26,16 +27,20 @@ const HomePage = () => {
         setOnlineStreamEvents(upcoming.data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
     requestMovies();
+
   }, []);
 
   return (
     <>
-      <HeroCarousel />
+      {/* Hero Section */} <HeroCarousel />
 
+      {/* Entertainment Section */}
       <div className="container mx-auto px-4 md:px-12 my-8">
         <h1 className="text-2xl font-bold text-gray-800 sm:ml-3 ml-0 my-3">
           The best of Entertainment
@@ -44,35 +49,49 @@ const HomePage = () => {
         <EntertainmentCardSlider />
       </div>
 
+      {/* Recommended Movies */}
       <div className="container mx-auto px-4 md:px-12 my-8">
-        <PosterSlider
-          title="Recommended Movies"
-          subtitle="List of recommended movies"
-          posters={recommendedMovies}
-          isDark={false}
-        />
+        {loading ? (
+          <p className="text-center text-gray-500">Loading movies...</p>
+        ) : (
+          recommendedMovies.length > 0 && (
+            <PosterSlider
+              title="Recommended Movies"
+              subtitle="List of recommended movies"
+              posters={recommendedMovies}
+              isDark={false}
+            />
+          )
+        )}
       </div>
 
-      <div className="bg-premier-800 py-12">
-        <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
-          <PosterSlider
-            title="Premieres"
-            subtitle="Brand new releases every Friday"
-            posters={premierMovies}
-            isDark={true}
-          />
+      {/* Premier Section */}
+      {premierMovies.length > 0 && (
+        <div className="bg-premier-800 py-12">
+          <div className="container mx-auto px-4 md:px-12 my-8 flex flex-col gap-3">
+            <PosterSlider
+              title="Premieres"
+              subtitle="Brand new releases every Friday"
+              posters={premierMovies}
+              isDark={true}
+            />
+          </div>
         </div>
-      </div>
+      )}
 
+      {/* Online Streaming */}
       <div className="container mx-auto px-4 md:px-12 my-8">
-        <PosterSlider
-          title="Online Streaming Events"
-          subtitle="Online stream events"
-          posters={onlineStreamEvents}
-          isDark={false}
-        />
+        {onlineStreamEvents.length > 0 && (
+          <PosterSlider
+            title="Online Streaming Events"
+            subtitle="Online stream events"
+            posters={onlineStreamEvents}
+            isDark={false}
+          />
+        )}
       </div>
     </>
+
   );
 };
 

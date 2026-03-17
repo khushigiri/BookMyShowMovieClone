@@ -48,54 +48,48 @@ function NavMd() {
 
 /* Large Screen Navbar */
 function NavLg() {
-  return (<div className="container flex mx-auto px-4 items-center justify-between">
+  return (
+    <div className="container mx-auto px-4 flex items-center justify-between">
 
-    < div className="flex items-center w-1/2 gap-3" >
-      <Link to="/" className="w-10 h-10">
-        <img src={LOGO} alt="BookMyShow Logo" className="w-full h-full" />
-      </Link>
+      {/* Left Section */}
+      <div className="flex items-center w-2/3 gap-4">
+        <Link to="/" className="w-10 h-10">
+          <img src={LOGO} alt="logo" className="w-full h-full" />
+        </Link>
 
-      <div className="w-full flex items-center gap-3 bg-white px-3 py-1 rounded-md">
-        <BiSearch />
-
-        <input
-          type="search"
-          aria-label="Search movies and events"
-          className="w-full bg-transparent border-none focus:outline-none"
-          placeholder="Search for movies, events, plays, sports and activities"
-        />
+        <div className="w-full flex items-center gap-2 bg-white px-4 py-2 rounded-md">
+          <BiSearch />
+          <input
+            type="search"
+            placeholder="Search for movies, events, plays..."
+            className="w-full bg-transparent outline-none"
+          />
+        </div>
       </div>
-      <div />
 
-      <div className="flex items-center gap-3">
+      {/* Right Section */}
+      <div className="flex items-center gap-6">
 
-        <span className="text-gray-200 text-base flex items-center hover:text-white">
+        <span className="text-gray-300 text-sm font-medium hover:text-white transition flex items-center">
           Hospet <BiChevronDown />
         </span>
 
         <Link
           to="/plays"
-          className="text-gray-200 text-base hover:text-white"
+          className="text-gray-300 text-sm font-medium hover:text-white transition"
         >
           Plays
         </Link>
 
-        <button
-          type="button"
-          className="bg-red-600 text-white px-2 py-1 text-sm rounded"
-        >
+        <button className="bg-red-600 px-4 py-2 text-white text-sm rounded-md font-semibold hover:bg-red-700 transition">
           Sign In
         </button>
 
-        <div className="w-8 h-8 text-white">
-          <BiMenu className="w-full h-full" />
-        </div>
+        <BiMenu className="text-white text-2xl cursor-pointer" />
 
       </div>
-    </div >
-  </div>
+    </div>
   );
-
 }
 
 /* Main Navbar */

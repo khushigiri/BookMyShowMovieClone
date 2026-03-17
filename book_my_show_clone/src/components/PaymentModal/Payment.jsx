@@ -8,8 +8,12 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
   };
 
   const launchRazorPay = () => {
+    console.log(process.env.REACT_APP_RAZORPAY_KEY);
+    console.log("Pay button clicked");
+    console.log("Price:", price);
     const options = {
       key: process.env.REACT_APP_RAZORPAY_KEY,
+
       amount: (price || 0) * 100,
       currency: "INR",
       name: "BookMyShow Clone",
@@ -35,7 +39,7 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
 
   return (<Transition appear show={isOpen} as={Fragment}>
 
-    <Dialog as="div" className="relative z-10" onClose={closeModal}>
+    <Dialog as="div" className="relative z-50" onClose={closeModal}>
 
       <Transition.Child
         as={Fragment}
@@ -79,10 +83,13 @@ const PaymentModal = ({ setIsOpen, isOpen, price }) => {
 
                 <button
                   type="button"
+
                   onClick={launchRazorPay}
                   className="flex-1 rounded-md bg-red-500 px-4 py-2 text-sm font-medium text-white hover:bg-red-700"
                 >
+
                   Pay ₹{price}
+
                 </button>
 
                 <button
