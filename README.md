@@ -1,75 +1,58 @@
 # BookMyShow Clone (React)
 
-A BookMyShow-inspired movie browsing web application built using React.js.
-The application allows users to explore movies, view details, see cast information, browse plays, and simulate movie rental or purchase using a Razorpay payment modal.
+A fully responsive **BookMyShow-inspired movie browsing web application** built using **React.js**.
 
-This project fetches movie data dynamically from **The Movie Database (TMDB) API** and displays it using responsive UI components built with **Tailwind CSS**.
+Users can explore movies, view details, browse cast information, discover plays, and simulate movie rental or purchase using a **Razorpay payment integration**.
+
+---
+
+## Live Demo
+
+https://bookmyshowmoviesiteclone.netlify.app/
 
 ---
 
 ## Features
 
-* Browse popular, top-rated, and upcoming movies
-* Interactive hero carousel
-* Detailed movie information page
-* Cast and crew slider
-* Recommended and similar movies
-* Browse plays and events
-* Razorpay payment integration for rent or buy
-* Fully responsive design
-* Movie search UI
-* Dynamic poster sliders
+* Browse **popular, top-rated, and upcoming movies**
+* Interactive **hero carousel**
+* Detailed **movie information page**
+* **Cast and crew slider**
+* **Recommended & similar movies**
+* Browse **plays and events**
+* Razorpay **payment integration (Rent / Buy)**
+* Movie **search UI**
+* Fully **responsive design**
+* Dynamic **poster sliders**
 
 ---
 
 ## Tech Stack
 
-**Frontend**
+### Frontend
 
 * React.js
 * Tailwind CSS
 * React Router DOM
 * Axios
 
-**UI & Libraries**
+### UI & Libraries
 
 * React Slick (Carousel)
 * Headless UI
 * React Icons
 
-**API**
+### API
 
 * TMDB API (The Movie Database)
 
-**Payment**
+### Payment
 
 * Razorpay Payment Gateway
 
 ---
 
-## Screens
-
-* Home page with movie carousels
-* Movie details page with cast, offers, and recommendations
-* Plays page with filters
-* Razorpay payment modal
-
----
-
-## Payment Integration
-
-The project integrates **Razorpay** for simulated movie purchase or rental.
-
-Payment options:
-
-* Rent Movie
-* Buy Movie
-
----
-
-## API Used
-
-The application uses TMDB API endpoints such as:
+## API Endpoints Used
 
 * `/movie/popular`
 * `/movie/top_rated`
@@ -83,12 +66,31 @@ The application uses TMDB API endpoints such as:
 
 ## Responsive Design
 
-The UI adapts to:
+Optimized for:
 
-* Mobile devices
-* Tablets
-* Desktop screens
+* Mobile 
+* Tablet 
+* Desktop 
 
 Using Tailwind CSS utility classes.
+
+---
+
+## Payment Integration
+
+Integrated **Razorpay** to simulate movie booking:
+
+* Rent Movie
+* Buy Movie
+
+---
+
+## Key Highlights
+
+* Built using **component-based architecture**
+* Optimized API calls using **Promise.all**
+* Implemented **lazy loading for performance**
+* Used **Context API for state management**
+* Integrated **real payment gateway simulation**
 
 ---
