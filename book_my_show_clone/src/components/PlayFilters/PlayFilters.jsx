@@ -13,6 +13,7 @@ const PlayFilters = (props) => {
               {props.title}
             </span>
           </Disclosure.Button>
+
           <Disclosure.Panel className="px-4 pt-4 pb-2 text-sm text-gray-500">
             <div className="flex items-center gap-3 flex-wrap">
               {props.tags.map((tag, index) => (
@@ -30,4 +31,5 @@ const PlayFilters = (props) => {
     </Disclosure>
   );
 };
+
 export default PlayFilters;
